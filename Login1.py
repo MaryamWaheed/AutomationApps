@@ -17,7 +17,7 @@ def set_up_appium():
     options.set_capability('appPackage', 'com.ithnain.ithnainapp')
     options.set_capability('appActivity', 'com.ithnain.ithnainapp.MainActivity')
     options.set_capability('uiautomator2ServerLaunchTimeout', 60000)
-    return webdriver.Remote("http://127.0.0.1:4723", options=options)
+    return webdriver.Remote("http://appium-server:4723", options=options)
 
 # Wait for element and click
 def wait_and_click(driver, locator, timeout=50):
@@ -261,5 +261,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
